@@ -3,7 +3,7 @@ name: Upstream Sync
 permissions:
   contents: write
 
-on:
+于:
   schedule:
     - cron: "0 4 * * *" # At 12PM UTC+8
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
     steps:
       # Step 1: run a standard checkout action
       - name: Checkout target repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       # Step 2: run the sync action
       - name: Sync upstream changes
